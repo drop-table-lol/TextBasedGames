@@ -2,8 +2,8 @@
 using namespace std;
 /* 	Health Decrement.cpp
 **	Use with CheatEngine to practice finding values.
-**	User has successfuly completed when they can set health to a different value than prev value -1
-**	V1.0.1 uses simple ints.
+**	User has successfuly completed when the Hero's health increments rather than decrements.
+**	V1.0.1 uses int pointers and pass by reference
 */
 
 void decrementHealth(int *);
