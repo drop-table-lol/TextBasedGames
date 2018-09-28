@@ -1,0 +1,10 @@
+Notes
+	Oh No! our hero is taking damage! There are many different attacks chipping health off our hero.
+	It's our job to save him. In fact, let's use the old adage, "what doesn't kill you makes you stronger"
+	and increase his health each time the enemy strikes!
+	
+Goal:
+	Use CheatEngine to...
+	Find the health variable, and the associated function(s) that affect our health.
+	change the sub <reg> <val> assembly to add <reg> <val>
+	This is "reverse" engineering after all... 
