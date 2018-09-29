@@ -23,6 +23,7 @@ int main() {
   cout << "Ouch! " << short_health << " left!" << endl;
   cout << "Ouch! " << float_health << " left!" << endl;
   cin >> inputstr;  //wait for input (no sanitization) but we're the attacker in this anyway, using cheatEngine
-  return 0;
+  }
+    return 0;
 }
 
