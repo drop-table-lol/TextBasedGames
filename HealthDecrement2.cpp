@@ -6,8 +6,15 @@ using namespace std;  //TODO implement empty namespace -> Google standard
 **	V1.0.1 uses int pointers and pass by reference
 */
 
-void decrementHealth(int *);  //google standard says to avoid forward declaration, 
-void printHealth (int *);  //however, a header file seems like overkill here...
+void decrementHealth(int * h) {
+  *h = *h-1;  //interestingly, postdecrement did not work here... *h--; Is decrement higher precedence than pointer dereference?
+  return;
+}
+
+void printHealth(int *h) {
+  cout << *h << " health left!"<< endl;
+  return;
+}
 
 
 int main() {
@@ -23,12 +30,4 @@ int main() {
   return 0;
 }
 
-void decrementHealth(int * h) {
-  *h = *h-1;  //interestingly, postdecrement did not work here... *h--; Is decrement higher precedence than pointer dereference?
-  return;
-}
 
-void printHealth(int *h) {
-  cout << *h << " health left!"<< endl;
-  return;
-}

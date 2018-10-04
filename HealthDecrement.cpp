@@ -6,8 +6,16 @@ using namespace std;
 **	V1.0.1 uses simple ints and pass by value.
 */
 
-int decrementHealth(int);
-void printHealth(int);
+
+int decrementHealth(int h) {
+  return h-1;
+}
+
+void printHealth(int h) {
+  cout << h << " health left!" << endl;
+  return;
+}
+
 
 int main() {
 
@@ -22,11 +30,3 @@ int main() {
   return 0;
 }
 
-int decrementHealth(int h) {
-  return h-1;
-}
-
-void printHealth(int h) {
-  cout << h << " health left!" << endl;
-  return;
-}
