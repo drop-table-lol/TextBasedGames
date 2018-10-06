@@ -56,6 +56,12 @@ string DetermineWinner(string playerchoice, string pcinput) { //no timing yet.
 	else if (playerchoice == "heavy" && pcinput == "quick") {
 		PlayerLoss();
 	}
+	else if (playerchoice == pcinput) {
+    cout << "Blades clash, weapons are blunted, heros roar. Nothing happens..." << endl;
+	}
+	else if (playerchoice != "quick" && playerchoice != "shield" && playerchoice != "heavy") {
+    PlayerLoss();
+  }
 	else {
 		PlayerWin();
 	}

@@ -1,5 +1,7 @@
 #include <iostream> //for write to console
-using namespace std; //TODO refactor to use local namespace
+using std::cin;
+using std::cout;
+using std::endl;
 /* 	Health Decrement5.cpp
 **	Use with CheatEngine to practice finding values.
 **	User has successfuly completed when they can increment health rather than decrease it

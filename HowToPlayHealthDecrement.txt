@@ -1,5 +1,5 @@
-otes
-	h No! our hero is taking damage! There are many different attacks chipping health off our hero.
+Notes
+	Oh No! our hero is taking damage! There are many different attacks chipping health off our hero.
 	it's our job to save him. In fact, let's use the old adage, "what doesn't kill you makes you stronger"
 	and increase his health each time the enemy strikes!
 	
@@ -8,3 +8,14 @@ Goal:
 	Find the health variable, and the associated function(s) that affect our health.
 	change the sub <reg> <val> assembly to add <reg> <val>
 	This is "reverse" engineering after all... 
+
+Notes:
+	Let's start with level one, which simply needs to find and freeze a variable.
+	That makes it more simple. As the difficulty ramps up (such as health decrement)
+	you'll need to do code injections (which cheatengine provides templates for).
+	To keep you on your toes, and to help the monsters, sometimes the value for health 
+	will not be an int, but a string, and sometimes the function to increase or decrease
+	health will not be a simple subtraction or addition, but an atoi() and back, or a complicated bitshift.
+	There are many ways to get around these functions. Utilize all weapons, including noops, 
+	code injections, setting values higher to give yourself more time, etc.
+	Good luck heros!
