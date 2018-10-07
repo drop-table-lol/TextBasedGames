@@ -1,0 +1,22 @@
+Dynamic Combat
+	Rock-Paper-Scissors style
+	quickstrike->shieldcharge->heavysmash
+	quick>shield>heavy
+	Timed-written combat
+	
+	Rule dependencies
+		Beast/Humanoid/Undead (fierce, dunno, riseagain)
+		Weather/Elemental (rain, electric, swampfog, etc)
+		Location/dangers/medium (liquid, gel, aloft in air)
+		Spells/Levels (wordsmith, cards/decks, etc)
+	Rule Enhancers
+		Equipment(auto-deploy words)
+		Encounter level (quicker, better gear, etc)
+		Mentality (slower wordsmithing, etc)
+			fatigue
+			
+			
+	As a player I can perform combat
+		as a combat I can take two strings
+		as a combat I can compare two strings
+		as a combat I can determine the "winner"
