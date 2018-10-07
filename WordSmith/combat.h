@@ -5,12 +5,11 @@
 	Add timing element
 	smarter AI
 	enums of ROCK PAPER and SCISSORS, generalize winning logic
-	Resolve ties to not be defaulted to player...
+	Templa-tize logic for diff types/classes
 */
 #include <string>
 #include <cstdlib>
 #include <ctime>
-#include <string>
 #include <iostream>
 
 using std::string;
