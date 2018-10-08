@@ -1,6 +1,8 @@
 #include "combat.h"
 #include "Entity.h"
 #include "Player.h"
+#include "WordDeck.h"
+#include "Globals.h"
 
 #include <string>
 #include <cstdlib>
@@ -8,6 +10,7 @@
 using std::cout;
 using std::cin;
 using std::endl;
+using Globals::deck_size;
 
 
 int main() {
@@ -16,7 +19,7 @@ int main() {
   //cout << "Choose: 'quick' or 'heavy' or 'shield' " << endl;
   enum enum_of_entity_ {player, beast, undead, humanoid};
 
-  Entity Hero(player);
+  /*Entity Hero(player);
   Entity Evil(beast);
   Entity Death(undead);
   Entity Who(humanoid);
@@ -26,6 +29,10 @@ int main() {
   cout << Death.ReturnName() << " has "  << Death.GetHealth() << " health left!" <<endl;
   cout << Who.ReturnName() << " has "  << Who.GetHealth() << " health left!" << endl;
   cout << P.ReturnName() << " has " << P.GetHealth() << " health left!" << endl;
+*/
+  string firedeck[deck_size] = {"firestrike", "fireball", "fireward"};
+  Deck D("fire", firedeck);
+  cout << D.GetWordsForPrint();
 
 /*
   srand((int)time(0));
