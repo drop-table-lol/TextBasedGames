@@ -7,6 +7,8 @@
 	enums of ROCK PAPER and SCISSORS, generalize winning logic
 	Templa-tize logic for diff types/classes
 */
+#include "Globals.h"
+
 #include <string>
 #include <cstdlib>
 #include <ctime>
@@ -16,6 +18,7 @@ using std::string;
 using std::cin;
 using std::cout;
 using std::endl;
+using namespace Globals; //we use the whole thing...
 
 
 string GetPlayerInput() {
@@ -31,7 +34,7 @@ string GeneratePCInput() {
 		case(0):
 			return "quick";
 		case(1):
-			return "shield";
+			return "block";
 		case(2):
 			return "heavy"; //no breaks since we're returning out of switch.
   }
@@ -45,25 +48,66 @@ string PlayerWin() {
 	cout << "You rule!" << endl;
 }
 
+bool IsQuickChoice(string choice) {
+  for(int i=0; i<quick_strings.size(); i++) {
+    if (quick_strings[i] == choice) {
+        return true;
+    }
+  }
+  return false;
+}
+
+bool IsHeavyChoice(string choice) {
+  for(int i=0; i<heavy_strings.size(); i++) {
+    if (heavy_strings[i] == choice) {
+        return true;
+    }
+  }
+  return false;
+}
+
+bool IsBlockChoice(string choice) {
+  for(int i=0; i<block_strings.size(); i++) {
+    if (block_strings[i] == choice) {
+        return true;
+    }
+  }
+  return false;
+}
+
+bool IsDodgeChoice(string choice) {
+  for(int i=0; i<dodge_strings.size(); i++) {
+    if (dodge_strings[i] == choice) {
+        return true;
+    }
+  }
+  return false;
+}
+
+
+
+
 string DetermineWinner(string playerchoice, string pcinput) { //no timing yet.
-	if (playerchoice == "quick" && pcinput == "shield") {
+	if (IsQuickChoice(playerchoice) && IsBlockChoice(pcinput)) {
 		PlayerLoss();
 	}
-	else if (playerchoice == "shield" && pcinput == "heavy") {
+	else if (IsBlockChoice(playerchoice) && IsHeavyChoice(pcinput)) {
 		PlayerLoss();
 	}
-	else if (playerchoice == "heavy" && pcinput == "quick") {
+	else if (IsHeavyChoice(playerchoice) && IsQuickChoice(pcinput)) {
 		PlayerLoss();
 	}
 	else if (playerchoice == pcinput) {
     cout << "Blades clash, weapons are blunted, heros roar. Nothing happens..." << endl;
 	}
-	else if (playerchoice != "quick" && playerchoice != "shield" && playerchoice != "heavy") {
+	else if (!IsQuickChoice(playerchoice) && !IsHeavyChoice(playerchoice) && !IsBlockChoice(playerchoice)) {
     PlayerLoss();
   }
 	else {
 		PlayerWin();
 	}
 }
+
+
 
 #endif FIGHTFIGHTFIGH_H_

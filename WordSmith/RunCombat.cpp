@@ -10,13 +10,17 @@
 using std::cout;
 using std::cin;
 using std::endl;
-using Globals::deck_size;
-
+using namespace Globals;
 
 int main() {
-  //cout << "Welcome to Wordsmith!" << endl;
-  //cout << "Basically rock paper scissors for now" << endl;
-  //cout << "Choose: 'quick' or 'heavy' or 'shield' " << endl;
+  quick_strings.insert(quick_strings.begin(), "quick");
+	heavy_strings.insert(heavy_strings.begin(), "heavy");
+	block_strings.insert(block_strings.begin(), "block");
+  dodge_strings.insert(dodge_strings.begin(), "dodge");
+
+  cout << "Welcome to Wordsmith!" << endl;
+  cout << "Basically rock paper scissors for now" << endl;
+  cout << "Choose: 'quick' or 'heavy' or 'shield' " << endl;
   enum enum_of_entity_ {player, beast, undead, humanoid};
 
   /*Entity Hero(player);
@@ -29,12 +33,12 @@ int main() {
   cout << Death.ReturnName() << " has "  << Death.GetHealth() << " health left!" <<endl;
   cout << Who.ReturnName() << " has "  << Who.GetHealth() << " health left!" << endl;
   cout << P.ReturnName() << " has " << P.GetHealth() << " health left!" << endl;
-*/
+
   string firedeck[deck_size] = {"firestrike", "fireball", "fireward"};
   Deck D("fire", firedeck);
   cout << D.GetWordsForPrint();
+*/
 
-/*
   srand((int)time(0));
   string player_choice;
   string computer_choice;
@@ -48,7 +52,7 @@ int main() {
 
   }
 
-*/
+
 
 return 0;
 }
