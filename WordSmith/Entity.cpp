@@ -12,6 +12,8 @@ Entity::Entity(int type_of_entity) {
   GenerateName();
   health_ = 10;
   base_power_ = 1;
+  dexterity_ = base_power_;
+  strength_ = base_power_;
 }
 
 

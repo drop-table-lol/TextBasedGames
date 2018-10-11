@@ -12,6 +12,7 @@ namespace Globals{
 	const int high_bound = 2;
 	const int deck_size = 3;
 	enum action_categories {quick, heavy, block, dodge};
+	enum action_stats {strength, dexterity, wordsmith};
 	vector<string> quick_strings;
 	vector<string> heavy_strings;
 	vector<string> block_strings;

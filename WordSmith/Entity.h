@@ -1,3 +1,4 @@
+
 #ifndef ENTITY_H_
 #define ENTITY_H_ //combat is a boring name for now...
 /*TODO
@@ -14,7 +15,10 @@ private:
   int health_;
   int base_power_;
   int type_of_entity_;
+  int strength_;
+  int dexterity_;
   string name_of_entity_;
+
 
 public:
   Entity(int type_of_entity);
