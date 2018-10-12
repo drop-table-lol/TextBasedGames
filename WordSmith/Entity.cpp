@@ -53,3 +53,48 @@ void Entity::GenerateName() {
 string Entity::ReturnName() {
   return name_of_entity_;
 }
+
+
+
+string Entity::GetAction() {
+	//random stuff
+	return rock or paper or scissors
+}
+
+bool Entity::IsDead() {
+	if (health_<=0) {
+		return true;
+	}
+	else {
+		return false;
+	}
+
+void Entity::LevelUp() {
+} //something simple for now...?
+
+int Entity::GetDexterity() {
+	return dexterity_;
+}
+
+void Entity::IncreaseDexterity() {
+	++dexterity_;
+}	
+void Entity::DecreaseDexterity() {
+	--dexterity_;
+}
+void Entity::SetDexterity(int new_dexterity) {
+	dexterity_ = new_dexterity;
+}
+
+int Entity::GetStrength(){
+	return strength_;
+}
+void Entity::IncreaseStrength() {
+	++strength_;
+}
+void Entity::DecreaseStrength() {
+	--strength_;
+}
+void Entity::SetStrength(int new_strength) {
+	strength_ = new_strength;
+}

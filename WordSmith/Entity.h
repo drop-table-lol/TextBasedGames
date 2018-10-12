@@ -28,6 +28,17 @@ public:
   void SetEntityType(int entity_type);
   void GenerateName();
   string ReturnName();
+  int GetDexterity(); 				//returns for comparisions
+  void IncreaseDexterity();			//levelup
+  void DecreaseDexterity();			//levelup
+  void SetDexterity(int new_dexterity);	//temporary changes
+  int GetStrength();
+  void IncreaseStrength();
+  void DecreaseStrength();
+  void SetStrength(int new_Strength);
+  void LevelUp();			//TODO balance test
+  bool IsDead();
+  string GetAction();
 
 };//end entity
 
