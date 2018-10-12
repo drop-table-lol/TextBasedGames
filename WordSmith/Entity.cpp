@@ -1,6 +1,10 @@
 #include "Entity.h"
 
 #include <string>
+#include <cstdlib>
+#include <ctime>
+#include <iostream>
+using std::cin;
 
 /*TODO
 	Make Virtual functions
@@ -57,8 +61,24 @@ string Entity::ReturnName() {
 
 
 string Entity::GetAction() {
-	//random stuff
-	return rock or paper or scissors
+  if (type_of_entity_ == 0) {
+    string input;
+    cin >> input;
+    return input;
+  }
+  else {
+    int choice;
+    choice = (rand() % 3);
+    switch(choice) {
+      case(0):
+        return "quick";
+      case(1):
+        return "block";
+      case(2):
+        return "heavy"; //no breaks since we're returning out of switch.
+    }
+    return "";
+  }
 }
 
 bool Entity::IsDead() {
@@ -68,8 +88,11 @@ bool Entity::IsDead() {
 	else {
 		return false;
 	}
+}
 
 void Entity::LevelUp() {
+  IncreaseDexterity();
+  IncreaseStrength();
 } //something simple for now...?
 
 int Entity::GetDexterity() {
@@ -78,7 +101,7 @@ int Entity::GetDexterity() {
 
 void Entity::IncreaseDexterity() {
 	++dexterity_;
-}	
+}
 void Entity::DecreaseDexterity() {
 	--dexterity_;
 }

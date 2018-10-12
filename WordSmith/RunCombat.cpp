@@ -46,16 +46,11 @@ int main() {
   string computer_choice;
 
   while(true) {
-      player_choice = Hero.GetAction();//GetPlayerInput();
-      computer_choice = Evil.GetAction();
-      cout << "Player entered " << player_choice << "..." << endl;
-      cout << "PC entered " << computer_choice << "..." << endl;
-      DetermineWinner(player_choice, computer_choice);
-      cin >> player_choice;
-
+    player_choice = Hero.GetAction();//GetPlayerInput();
+    computer_choice = Evil.GetAction();
+    cout << "Player entered " << player_choice << "..." << endl;
+    cout << "PC entered " << computer_choice << "..." << endl;
+    DetermineWinner(player_choice, computer_choice);
   }
-
-
-
 return 0;
 }

@@ -38,14 +38,17 @@ string GeneratePCInput() {
 		case(2):
 			return "heavy"; //no breaks since we're returning out of switch.
   }
+  return "";
 }
 
 string PlayerLoss() {
 	cout << "You suck!" << endl;
+	return "";
 }
 
 string PlayerWin() {
 	cout << "You rule!" << endl;
+	return "";
 }
 
 bool IsQuickChoice(string choice) {
@@ -106,6 +109,7 @@ string DetermineWinner(string playerchoice, string pcinput) { //no timing yet.
 	else {
 		PlayerWin();
 	}
+	return "";
 }
 
 
