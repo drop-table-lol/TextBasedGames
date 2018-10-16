@@ -4,7 +4,9 @@
 #ifndef WORDDECK_H_
 #define WORDDECK_H_
 #include "Globals.h"
+
 #include <string>
+
 using std::string;
 using Globals::deck_size;
 
