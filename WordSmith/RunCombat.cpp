@@ -11,9 +11,9 @@ using std::cout;
 using std::cin;
 using std::endl;
 using namespace Globals;
-extern low_bound;
-extern high_bound;
-extern deck_size;
+extern Globals::low_bound;
+extern Globals::high_bound;
+extern Globals::deck_size;
 
 void PrintInfo(Entity E1) {
   cout << E1.ReturnName() << endl;;
