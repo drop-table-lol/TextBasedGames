@@ -26,7 +26,7 @@ int main() {
   dodge_strings.insert(dodge_strings.begin(), "dodge");
 
   cout << "Welcome to Wordsmith!" << endl;
-  cout << "Basically rock paper scissors for now" << endl;
+  cout << "Medieval Rock, paper, scissors, gunpowder..." << endl;
   cout << "Choose: 'quick' or 'heavy' or 'block' or 'dodge'" << endl;
   enum enum_of_entity_ {player, beast, undead, humanoid};
 
