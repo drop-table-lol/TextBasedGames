@@ -33,7 +33,7 @@ int GetHowMany() {
 
 void FillArr(string arr[], int length) {
 
-	for (int i=0; i<length; i++) {
+	for (int i=0; i<length; ++i) {
 		cout << "Enter name please: ";
 		cin >> arr[i];
 	}
@@ -44,7 +44,7 @@ void SortArr(string arr[], int length) {
 }
 
 void PrintArr(string arr[], int length) {
-	for (int i=0; i<length; i++) {
+	for (int i=0; i<length; ++i) {
 		cout << arr[i] << endl;
 	}
 }
