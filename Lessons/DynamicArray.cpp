@@ -21,6 +21,7 @@ int main() {
 	FillArr(arr, length);
 	//SortARR(arr, length);
 	PrintArr(arr, length);
+	delete[] arr;
 
 }
 int GetHowMany() {
