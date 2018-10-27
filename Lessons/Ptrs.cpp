@@ -6,7 +6,9 @@ using std::cout;
 using std::endl;
 
 
-
+ inline int DoubleVal(int x) {
+   return x*x;
+}
 
 int main() {
 
@@ -40,5 +42,8 @@ int main() {
       cout << arr[i] << endl;
       z++;
   }
+
+
+  cout << DoubleVal(x) << endl;
 }
 
