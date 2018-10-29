@@ -45,5 +45,6 @@ int main() {
 
 
   cout << DoubleVal(x) << endl;
+  cout << sizeof(z) << endl;
 }
 
