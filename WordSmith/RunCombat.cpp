@@ -19,6 +19,37 @@ void PrintInfo(Entity E1) {
   cout << E1.ReturnName() << endl;;
 }
 
+
+
+void PlayCombat(Player P, Entity Enemy) {
+  int win; //declare out of loop to save mem
+  string player_choice;
+  string computer_choice;
+  while(P.GetHealth()>0 && Enemy.GetHealth()>0) {
+    player_choice = P.GetAction();//GetPlayerInput();
+    computer_choice = Enemy.GetAction();
+    cout << "Player entered " << player_choice << "..." << endl;
+    cout << "PC entered " << computer_choice << "..." << endl;
+    win = DetermineWinner(player_choice, computer_choice);
+    if (win == -1) { //NEED TO ENUM THESE
+      cout << "the battle continues" << endl;
+    }
+    if (win == 0) {
+      cout << "The hero is hurt!" << endl;
+      P.TakeDamage(1);
+    }
+    if (win == 1) {
+      cout << "The hero strikes a blow!" << endl; //against whom? We have these fields in our objects...
+      Enemy.TakeDamage(1);
+    }
+  }
+  cout << "The battle concludes..." << endl;
+  cout << "Only the ";
+  if (P.GetHealth()> 0) {cout << P.ReturnName();}
+  else if (Enemy.GetHealth() > 0) {cout << Enemy.ReturnName();}
+  cout << " still stands." << endl;
+}
+
 int main() {
   quick_strings.insert(quick_strings.begin(), "quick");
 	heavy_strings.insert(heavy_strings.begin(), "heavy");
@@ -51,15 +82,10 @@ int main() {
 */
 
   srand((int)time(0));
-  string player_choice;
-  string computer_choice;
 
-  while(true) {
-    player_choice = Hero.GetAction();//GetPlayerInput();
-    computer_choice = Evil.GetAction();
-    cout << "Player entered " << player_choice << "..." << endl;
-    cout << "PC entered " << computer_choice << "..." << endl;
-    DetermineWinner(player_choice, computer_choice);
-  }
+
+  PlayCombat(P, Evil);
 return 0;
 }
+
+
