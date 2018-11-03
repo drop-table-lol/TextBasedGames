@@ -85,6 +85,10 @@ int main() {
 
 
   PlayCombat(P, Evil);
+  //P.setHealth=10
+  PlayCombat(P, Death);
+  //P.setHealth=10
+  PlayCombat(P, Who);
 return 0;
 }
 
