@@ -1,3 +1,12 @@
+/*A quick (misguided) lesson on casting. Instead of casting, or using pointers
+to point to the parent class portion of the child class in memory, I just used
+a template function to use whatever class was passed. This might be casting,
+but it is implicit and isn't useful from learning as the programmer's perspective.*/
+/*TODO: A better example would be to use pointers, or references, and pass by ref or address
+(instead of by value) and show that we can downcast (upcast?) from a child to a parent, but not
+vice versa, and that to use the child function, we should use virtual functions to override the parent
+functions.*/
+
 class parent {
 	private:
 		int parent_int_;
