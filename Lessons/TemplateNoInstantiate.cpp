@@ -5,7 +5,7 @@ Horrible security? Yes. Maximum breakage? Yes. Learning? Yes. */
 #include <iostream>
 using namespace std;
 
-template <class T>
+template <class T> //also tried to use a second template that wasn't input, but that fails as well. Probably creates funciton prototype with types T and T1... Tn to avoid this sort of issue?
 T GetIO(T notused) { //originally tried this without parameters, as I guess that wouldn't make much sense, templates must have params, otherwise no matching funciton is found.
   T in;
   cin >> in; //does this work? No. it doesn't
@@ -13,7 +13,7 @@ T GetIO(T notused) { //originally tried this without parameters, as I guess that
 }
 
 template <class T>
-void printIO(T out) {
+void PrintIO(T out) {
 	cout << out << endl; //this works, right? <</iostream is templatized
 }
 
@@ -23,10 +23,16 @@ T DoubleIt(T in) { //a regular template function to test against.
 }
 
 int main() {
-	printIO(GetIO(2)); //what happens?
+	auto ivar = GetIO(1); //this is still assigning type int.
+	auto cvar = GetIO('a'); //this assigns type char
+	PrintIO(GetIO(ivar));
+	PrintIO(GetIO(cvar));
 	/*Does it work for built in types? And fail for user types that don't overload "<<" and ">>" operators?
 	Does it fail before that since this function isn't actually using a type
 	and the compiler doesn't actually instantiate it?*/
+
+	/*however, it would be interesting to dissasmble this portion of code. My guess is the innermost function
+	is compiled first, figuring out its type and propogating upward.*/
 }
 
 
